@@ -23,6 +23,11 @@ const router = new VueRouter({
             component: Agenda
         },
         {
+            path: '/',
+            name: 'Login',
+            component: Login
+        },
+        {
             path: '/login',
             name: 'Login',
             component: Login

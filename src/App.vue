@@ -2,7 +2,7 @@
   <v-app dark>
     <v-toolbar app color="#555555">
       <v-toolbar-title class="headline text-uppercase">
-         <router-link to="/cdashboard">
+         <router-link to="/">
             <img src="./assets/logo.png" width="150px">
 </router-link>
       </v-toolbar-title>

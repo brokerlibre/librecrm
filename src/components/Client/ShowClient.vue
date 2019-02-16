@@ -1,5 +1,9 @@
 <template>
-  <div>{{client}}</div>
+  <div>
+    Aqui contém as informações de um único cliente 
+    {{ customer }}
+    {{ oi }}
+  </div>
 </template>
 
 <script>
@@ -8,13 +12,16 @@ const axios = require("axios");
 export default {
   // TO DO: FAZER VALIDACOES INFORMACOES CLIENTE
   // TO DO: CONFIRMAR INFORMACOES CLIENTES
-  data: () => ({}),
+  data: function(){
+    return { 
+      oi: this.customer  
+    }
+  },
   props: {
-    client: Object
+    customer: Object
   },
   methods: {
     submit() {
-      console.log(this.client);
     }
   },
   mounted() {

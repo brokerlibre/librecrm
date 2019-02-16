@@ -6,7 +6,7 @@
         <v-text-field v-model="name" label="Nome Completo" required></v-text-field>
         <v-text-field v-model="address" label="Endereço"></v-text-field>
         <v-text-field v-model="email" label="Email"></v-text-field>
-        <v-text-field v-mode="cel" label="Telefone"></v-text-field>
+        <v-text-field v-model="cel" label="Telefone"></v-text-field>
         <v-text-field v-model="cpf" label="CPF"></v-text-field>
         <v-btn @click="submit">Adicionar Cliente</v-btn>
       </v-form>
@@ -40,8 +40,7 @@ export default {
       //     console.log(error);
       //   });
       this.$router.push({
-        name: "ShowClient",
-        params: { client: this.client }
+        name: "ClientsDashboard"
       });
     }
   }

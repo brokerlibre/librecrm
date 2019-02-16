@@ -6,6 +6,7 @@ import ClientsDashboard from '../components/Client/ClientsDashboard'
 import NewClient from '../components/Client/NewClient'
 import ShowClient from '../components/Client/ShowClient'
 import Register from '../components/Auth/Register'
+import Dashboard from '../components/Dashboard'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -41,6 +42,11 @@ const router = new VueRouter({
             path: '/show_client',
             component: ShowClient,
             props: route => { return { client: route.params.client } }
+        },
+        {
+            name: 'Dashboard',
+            path: '/dashboard',
+            component: Dashboard
         }
     ]
 })

@@ -3,10 +3,15 @@ import './plugins/vuetify'
 import App from './App.vue'
 import Vuetify from 'vuetify'
 import router from './router'
-import Vuex from 'vuex'
+import colors from 'vuetify/es5/util/colors'
 
-Vue.use(Vuex)
-Vue.use(Vuetify)
+Vue.use(Vuetify, {
+  theme: {
+    primary: "#fee720",
+    secondary: "#545454", //
+    //
+  }
+})
 Vue.config.productionTip = false
 
 new Vue({

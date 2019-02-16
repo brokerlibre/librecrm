@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app dark>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
         <span>LIBRE</span>
@@ -27,11 +27,9 @@
 
 <script>
 import Home from "./components/Home";
-import store from "./store";
 
 export default {
   name: "App",
-  store,
   components: {
     Home
   },

@@ -16,12 +16,18 @@
 import { mapState } from "vuex";
 
 export default {
-  data: () => ({}),
-  computed: {
-    ...mapState({
-      clients: state => state.clients
-    })
-  }
+  data: () => ({
+    clients: [
+      {
+        name: "Matheus",
+        sales: [{ price: 1 }]
+      },
+      {
+        name: "Lucas",
+        sales: [{ price: 3 }]
+      }
+    ]
+  })
 };
 </script>
 

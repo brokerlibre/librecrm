@@ -1,5 +1,15 @@
 <template>
-  <v-container fluid></v-container>
+  <v-container fluid>
+    <v-layout row>
+      <v-flex md12></v-flex>
+    </v-layout>
+    <v-layout row>
+      <v-flex md12></v-flex>
+    </v-layout>
+    <v-layout row>
+      <v-flex md12></v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>

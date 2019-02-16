@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  librecrm:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    volumes:
+      - ./src:/libre/src
+      - ./json-server:/libre/json-server
+      - ./public:/libre/public
+      - ./package.json:/libre/package.json
+      - ./babel.config.js:/libre/babel.config.js
+    command: "yarn run serve --port 8000"

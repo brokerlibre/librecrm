@@ -1,17 +1,23 @@
 <template>
   <v-layout align-center justify-center row>
-    <v-flex mb-5 xs12>
-      Fazer a validação dos dados se o usuário está no banco de dados
-      utilizar a variavel valid
+     <v-card align-center justify-center >
+        <v-card-title primary-title>
+          <div>
+            <h3 class="headline mb-0">Login do Corretor</h3>
       <v-form ref="form" lazy-validation>
         <v-text-field v-model="user.email" label="Email" required></v-text-field>
         <v-text-field v-model="user.password" label="Senha" required></v-text-field>
         <v-btn @click="submit">Login</v-btn>
+      </v-form>
+          </div>
+        </v-card-title>
+
+        <v-card-actions>
         <router-link to="/register_broker">
           <a>Cadastrar um corretor</a>
         </router-link>
-      </v-form>
-    </v-flex>
+        </v-card-actions>
+      </v-card>
   </v-layout>
 </template>
 

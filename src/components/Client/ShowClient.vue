@@ -1,15 +1,27 @@
 <template>
-  <v-layout align-center justify-center column fill-height>
-    <h2>Nome: {{customer.name}}</h2>
-    <h3>Endereço: {{customer.address}}</h3>
-    <h3>Email: {{customer.email}}</h3>
-    <h3>Celular: {{customer.cel}}</h3>
-    <h3>CPF: {{customer.cpf}}</h3>
+<div>
+      <h2 class="display-1" style="margin-bottom: 20px; color: #C9D010;">Informações básicas do Cliente: {{customer.name}}</h2>
+    <v-flex xs12>
+      <v-card>
+        <v-card-title primary-title>
+          <div>
+            <div><strong>Email:</strong> {{customer.email}}</div>
+            <div><strong>CPF:</strong> {{customer.cpf}}</div>
+            <div><strong>Endereço:</strong>{{customer.address}}</div>
+            <div><strong>Celular:</strong>{{customer.cel}}</div>
+          </div>
+        </v-card-title>
+      </v-card>
+    </v-flex>
+  
+    <h2 class="display-1" style="margin: 20px 0px; color: #C9D010;">Lista de Negócios</h2>
+  <v-layout fill-height>
     <business-table/>
     <v-btn>
       <router-link to="/register_business">Cadastrar Business</router-link>
     </v-btn>
   </v-layout>
+</div>
 </template>
 
 <script>

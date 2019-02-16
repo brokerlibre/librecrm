@@ -1,9 +1,8 @@
 <template>
   <v-app dark>
-    <v-toolbar app>
+    <v-toolbar app color="#555555">
       <v-toolbar-title class="headline text-uppercase">
-        <span>LIBRE</span>
-        <span class="font-weight-light">CRM</span>
+         <img src="./assets/logo.png" width="150px">
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>

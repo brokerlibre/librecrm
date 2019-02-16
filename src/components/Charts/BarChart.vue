@@ -8,7 +8,22 @@ export default {
     return {
       options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true
+              }
+            }
+          ]
+        },
+        legend: {
+          labels: {
+            // This more specific font property overrides the global property
+            fontColor: "white"
+          }
+        }
       }
     };
   },

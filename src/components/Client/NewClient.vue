@@ -1,20 +1,27 @@
 <template>
-  <v-layout align-center justify-center row>
-    <v-flex mb-5 xs12>
-      <v-form ref="form">
-        <h3>Novo Cliente</h3>
-        <v-text-field v-model="customer.name" label="Nome Completo" required></v-text-field>
-        <v-text-field v-model="customer.address" label="Endereço"></v-text-field>
-        <v-text-field v-model="customer.email" label="Email"></v-text-field>
-        <v-text-field v-model="customer.cel" label="Telefone"></v-text-field>
-        <v-text-field v-model="customer.cpf" label="CPF"></v-text-field>
-        <v-text-field v-model="customer.telegram" label="Telegram"></v-text-field>
-        <v-text-field v-model="customer.facebook" label="Facebook"></v-text-field>
-
-        <v-btn @click="submit">Adicionar Cliente</v-btn>
-      </v-form>
-    </v-flex>
-  </v-layout>
+<div>
+      <v-card>
+<v-container>
+                  <h3 class="headline mb-0" style="color: yellow;">Novo cliente</h3>
+</v-container>
+<v-container grid-list-md text-xs-center>
+  <v-layout row wrap>
+   <v-flex xs6>
+                <v-text-field v-model="customer.name" label="Nome Completo" required></v-text-field>
+                <v-text-field v-model="customer.address" label="Endereço"></v-text-field>
+                <v-text-field v-model="customer.email" label="Email"></v-text-field>
+                <v-text-field v-model="customer.cel" label="Telefone"></v-text-field>
+   </v-flex>
+   <v-flex xs6>
+                <v-text-field v-model="customer.cpf" label="CPF"></v-text-field>
+                <v-text-field v-model="customer.telegram" label="Telegram"></v-text-field>
+                <v-text-field v-model="customer.facebook" label="Facebook"></v-text-field>
+   </v-flex>
+ </v-layout>
+            <v-btn @click="submit" style="color: yellow;">Adicionar Cliente</v-btn>
+    </v-container>
+      </v-card>
+</div>
 </template>
 
 <script>

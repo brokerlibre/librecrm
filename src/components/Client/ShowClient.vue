@@ -2,7 +2,6 @@
   <div>
     Aqui contém as informações de um único cliente
     {{ customer }}
-    {{ oi }}
     <v-btn>
       <router-link to="/register_business">Cadastrar Business</router-link>
     </v-btn>

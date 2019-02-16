@@ -5,7 +5,7 @@
     </v-btn>
 
     <v-flex mb12>
-      <h2>Clientes</h2>
+      <h2 class="display-1" style="margin-bottom: 20px; color: #C9D010;"> Lista de Clientes</h2>
     </v-flex>
     <v-flex mb12>
       <customers_table/>

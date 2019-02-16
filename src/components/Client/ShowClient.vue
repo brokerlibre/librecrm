@@ -1,9 +1,12 @@
 <template>
-  <v-layout align-center justify-center row>
-    <v-flex mb-5 xs-12>
-      <div>{{new_client}}</div>
-    </v-flex>
-  </v-layout>
+  <div>
+    Aqui contém as informações de um único cliente
+    {{ customer }}
+    {{ oi }}
+    <v-btn>
+      <router-link to="/register_business">Cadastrar Business</router-link>
+    </v-btn>
+  </div>
 </template>
 
 <script>
@@ -14,16 +17,14 @@ export default {
   // TO DO: CONFIRMAR INFORMACOES CLIENTES
   data: function() {
     return {
-      new_client: this.$route.params.client
+      oi: this.customer
     };
   },
   props: {
-    client: Object
+    customer: Object
   },
   methods: {
-    submit() {
-      console.log(this.client);
-    }
+    submit() {}
   }
   // mounted() {
   //   // console.log(this.client);

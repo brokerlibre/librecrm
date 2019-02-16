@@ -5,12 +5,28 @@
 </template>
 
 <script>
-import InsurancesContainer from "./Charts/InsurancesContainer";
-import InsurancesSellContainer from "./Charts/InsurancesSellContainer";
-
 export default {
-  components: { InsurancesContainer, InsurancesSellContainer },
-  data: () => ({})
+  data: () => ({}),
+  created: function() {
+    (function(w, d, s, u) {
+      w.RocketChat = function(c) {
+        w.RocketChat._.push(c);
+      };
+      w.RocketChat._ = [];
+      w.RocketChat.url = u;
+      var h = d.getElementsByTagName(s)[0],
+        j = d.createElement(s);
+      j.async = true;
+      j.src =
+        "https://rocketchat.temposerver.ml/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js?_=201702160944";
+      h.parentNode.insertBefore(j, h);
+    })(
+      window,
+      document,
+      "script",
+      "https://rocketchat.temposerver.ml/livechat"
+    );
+  }
 };
 </script>
 

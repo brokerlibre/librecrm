@@ -1,0 +1,100 @@
+{
+  "business": [
+    {
+      "name": "fdsa",
+      "address": "fdsa",
+      "email": "fqwer",
+      "cel": "fqwer",
+      "cpf": "",
+      "id": 1
+    },
+    {
+      "name": "fdsa",
+      "address": "fdsa",
+      "email": "fdsa",
+      "cel": "fdsa",
+      "cpf": "",
+      "id": 2
+    },
+    {
+      "name": "dsa",
+      "address": "fdsa",
+      "email": "fdsa",
+      "cel": "sadfqw",
+      "cpf": "",
+      "id": 3
+    },
+    {
+      "name": "fdsa",
+      "address": "fdsa",
+      "email": "fdsa",
+      "cel": "fdsa",
+      "cpf": "fdsa",
+      "id": 4
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "eduardo",
+      "email": "fdsa@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "eduardo",
+      "email": "fdsa@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "eduardo",
+      "email": "fdsa@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "eduardo",
+      "email": "fdsa@gmail.com"
+    },
+    {
+      "name": "fdsa",
+      "address": "fdsa",
+      "email": "fdsa",
+      "cel": "fdsa",
+      "cpf": "fdsa",
+      "id": 5
+    },
+    {
+      "name": "fdsjakljfalj",
+      "address": "fdsafdsajkqwejrklqwej",
+      "email": "fdsakljfdskjalajçkl",
+      "cel": "jksjkdfaskldjfakls",
+      "cpf": "fdsjafdsafdsafa",
+      "id": 6
+    },
+    {
+      "name": "",
+      "address": "",
+      "email": "",
+      "cel": "",
+      "cpf": "",
+      "id": 7
+    },
+    {
+      "name": "fdsa",
+      "address": "fdsa",
+      "email": "fdsa",
+      "cel": "fdsa",
+      "cpf": "fdsa",
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

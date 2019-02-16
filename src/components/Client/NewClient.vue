@@ -27,15 +27,15 @@ export default {
   },
   methods: {
     submit() {
-      // axios
-      //   .post("http:://api.com/client", client)
-      //   .then(function(response) {
-      //     console.log(response);
-      //
-      //   })
-      //   .catch(function(error) {
-      //     console.log(error);
-      //   });
+      var self = this;
+      axios
+        .post("http://localhost:3000/customers", self.customer)
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
       var self = this;
       this.$router.push({name: 'ShowClient', params: { customer: self.customer }})
     }

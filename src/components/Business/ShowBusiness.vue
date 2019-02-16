@@ -1,11 +1,7 @@
 <template>
   <div>
-    Aqui contém as informações de um único cliente 
-    {{ customer }}
-    {{ oi }}
-    <v-btn>
-      <router-link to="/register_business">Cadastrar Business</router-link>
-    </v-btn>
+    Aqui contém as informações de um único negocio 
+    {{ business }}
   </div>
 </template>
 
@@ -15,17 +11,8 @@ const axios = require("axios");
 export default {
   // TO DO: FAZER VALIDACOES INFORMACOES CLIENTE
   // TO DO: CONFIRMAR INFORMACOES CLIENTES
-  data: function(){
-    return { 
-      oi: this.customer  
-    }
-  },
   props: {
-    customer: Object
-  },
-  methods: {
-    submit() {
-    }
+    business: Object
   },
   mounted() {
     // console.log(this.client);

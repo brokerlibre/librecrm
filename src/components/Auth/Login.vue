@@ -26,7 +26,7 @@ export default {
   methods: {
     submit() {
       console.log(this.user.email, this.user.password);
-      this.$router.push({ name: 'CustormersTable'})
+      this.$router.push({ name: 'CustomersTable'})
     },
     create_user(){
         var self = this;

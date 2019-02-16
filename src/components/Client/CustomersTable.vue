@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     changePage() {
-        this.$router.push({})
+        //this.$router.push({})
     }
   },
   created() {

@@ -31,29 +31,17 @@
       "cel": "fdsa",
       "cpf": "fdsa",
       "id": 4
+    },
+    {
+      "name": "12312312",
+      "address": "qdsad1231",
+      "email": "123123dqw",
+      "cel": "123131",
+      "cpf": "12312313",
+      "id": 5
     }
   ],
   "customers": [
-    {
-      "id": 1,
-      "name": "eduardo",
-      "email": "fdsa@gmail.com"
-    },
-    {
-      "id": 2,
-      "name": "eduardo",
-      "email": "fdsa@gmail.com"
-    },
-    {
-      "id": 3,
-      "name": "eduardo",
-      "email": "fdsa@gmail.com"
-    },
-    {
-      "id": 4,
-      "name": "eduardo",
-      "email": "fdsa@gmail.com"
-    },
     {
       "name": "fdsa",
       "address": "fdsa",
@@ -71,20 +59,20 @@
       "id": 6
     },
     {
-      "name": "",
-      "address": "",
-      "email": "",
-      "cel": "",
-      "cpf": "",
-      "id": 7
-    },
-    {
       "name": "fdsa",
       "address": "fdsa",
       "email": "fdsa",
       "cel": "fdsa",
       "cpf": "fdsa",
       "id": 8
+    },
+    {
+      "name": "Matheus S Bernardo",
+      "address": "Rua 4 Chácara 28 A",
+      "email": "matheussbernardo@gmail.com",
+      "cel": "6196957171",
+      "cpf": "1231231",
+      "id": 9
     }
   ],
   "comments": [

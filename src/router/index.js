@@ -33,7 +33,7 @@ const router = new VueRouter({
             component: ClientsDashboard
         },
         {
-            path: '/custormers',
+            path: '/customers',
             name: 'CustomersTable',
             component: CustomersTable
         },

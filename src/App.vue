@@ -13,6 +13,9 @@
         <v-btn flat>
           <router-link to="/cdashboard">Carteira de Clientes</router-link>
         </v-btn>
+        <v-btn flat>
+          <router-link to="/dashboard">Dashboard</router-link>
+        </v-btn>
       </v-toolbar-items>
       <v-btn flat>
         <router-link to="/login">Login</router-link>

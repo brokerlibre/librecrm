@@ -1,14 +1,18 @@
 <template>
-  <v-layout align-center justify-center column fill-height>
-    <v-btn>
+  <v-layout align-space-around column fill-height>
+    <v-btn fixed bottom large>
       <router-link to="/client">Cadastrar Cliente</router-link>
     </v-btn>
-    <h2>Clientes</h2>
-    <customers_table/>
+
+    <v-flex mb12>
+      <h2>Clientes</h2>
+    </v-flex>
+    <v-flex mb12>
+      <customers_table/>
+    </v-flex>
   </v-layout>
 </template>
 <script>
-import { mapState } from "vuex";
 import CustomersTable from "./CustomersTable";
 
 export default {

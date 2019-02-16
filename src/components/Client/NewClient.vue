@@ -8,6 +8,9 @@
         <v-text-field v-model="customer.email" label="Email"></v-text-field>
         <v-text-field v-model="customer.cel" label="Telefone"></v-text-field>
         <v-text-field v-model="customer.cpf" label="CPF"></v-text-field>
+        <v-text-field v-model="customer.telegram" label="Telegram"></v-text-field>
+        <v-text-field v-model="customer.facebook" label="Facebook"></v-text-field>
+
         <v-btn @click="submit">Adicionar Cliente</v-btn>
       </v-form>
     </v-flex>
@@ -22,7 +25,17 @@ export default {
   // TO DO: FAZER VALIDACOES INFORMACOES CLIENTE
   // TO DO: CONFIRMAR INFORMACOES CLIENTES
   data: function() {
-    return { customer: { name: "", address: "", email: "", cel: "", cpf: "" } };
+    return {
+      customer: {
+        name: "",
+        address: "",
+        email: "",
+        cel: "",
+        cpf: "",
+        telegram: "",
+        facebook: ""
+      }
+    };
   },
   components: {
     show_customer: ShowClient

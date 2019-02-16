@@ -11,8 +11,10 @@ import PieChart from "./PieChart";
 export default {
   name: "InsurancesContainer",
   components: { PieChart },
+  props: {
+    sales: Array
+  },
   data: () => ({
-    loaded: false,
     chartdata: {
       datasets: [
         {
@@ -20,21 +22,17 @@ export default {
           backgroundColor: ["#ff6384", "#36a2eb", "#ffce56", "#23ce56"]
         }
       ],
-      labels: ["Auto", "Habitação", "Vida", "Outros"]
+      labels: ["Automovel", "Habitação", "Vida", "Outros"]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false
     }
   }),
-  async mounted() {
-    this.loaded = false;
-    try {
-      //   const { userlist } = await fetch("/api/userlist");
-      // this.
-      this.loaded = true;
-    } catch (e) {
-      console.error(e);
+  mounted() {
+    var counts = {};
+    for (var i = 0; i < this.sale.length; i++) {
+      counts[this.sales[i]] = 1 + (counts[this.sales[i]] || 0);
     }
   }
 };

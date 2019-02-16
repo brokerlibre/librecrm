@@ -13,6 +13,7 @@
 </template>
 
 <script>
+const axios = require("axios");
 export default {
   data: () => ({
     name: "",
@@ -32,7 +33,10 @@ export default {
           name: this.name,
           password_confirmation: this.password_confirmation
         };
-        console.log(response);
+        axios
+          .post("https://libreapi.temposerver.ml/api/broker/", response)
+          .then(r => console.log(r.status))
+          .catch(e => console.log(e));
       }
     },
     password_validation() {

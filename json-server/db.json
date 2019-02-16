@@ -39,6 +39,116 @@
       "cel": "123131",
       "cpf": "12312313",
       "id": 5
+    },
+    {
+      "type": "auto",
+      "insurer": "Porto",
+      "value": "1234",
+      "confirmed_sale": false,
+      "date_payment": null,
+      "date_start": null,
+      "due": 0,
+      "share": 0,
+      "id": 6
+    },
+    {
+      "type": "auto",
+      "insurer": "hauheauh",
+      "value": "12312",
+      "confirmed_sale": false,
+      "date_payment": null,
+      "date_start": null,
+      "due": 0,
+      "share": 0,
+      "id": 7
+    },
+    {
+      "type": "",
+      "insurer": "",
+      "value": "",
+      "confirmed_sale": false,
+      "date_payment": null,
+      "date_start": null,
+      "due": 0,
+      "share": 0,
+      "id": 8
+    },
+    {
+      "type": "auto",
+      "insurer": "aheueh",
+      "value": "12312",
+      "confirmed_sale": true,
+      "date_payment": "2019-02-16",
+      "date_start": "2019-02-18",
+      "due": "123",
+      "share": "2323",
+      "id": 9
+    },
+    {
+      "type": "",
+      "insurer": "",
+      "value": "",
+      "confirmed_sale": false,
+      "date_payment": null,
+      "date_start": null,
+      "due": 0,
+      "share": 0,
+      "id": 10
+    },
+    {
+      "type": "house",
+      "insurer": "12321",
+      "value": "132213",
+      "confirmed_sale": false,
+      "date_payment": null,
+      "date_start": null,
+      "due": 0,
+      "share": 0,
+      "id": 11
+    },
+    {
+      "type": "house",
+      "insurer": "12312",
+      "value": "123312",
+      "confirmed_sale": false,
+      "date_payment": null,
+      "date_start": null,
+      "due": 0,
+      "share": 0,
+      "id": 12
+    },
+    {
+      "type": "auto",
+      "insurer": "liberty",
+      "value": "123",
+      "confirmed_sale": false,
+      "date_payment": null,
+      "date_start": null,
+      "due": 0,
+      "share": 0,
+      "id": 13
+    },
+    {
+      "type": "auto",
+      "insurer": "liberty",
+      "value": "123",
+      "confirmed_sale": false,
+      "date_payment": null,
+      "date_start": null,
+      "due": 0,
+      "share": 0,
+      "id": 14
+    },
+    {
+      "type": "",
+      "insurer": "",
+      "value": "",
+      "confirmed_sale": false,
+      "date_payment": null,
+      "date_start": null,
+      "due": 0,
+      "share": 0,
+      "id": 15
     }
   ],
   "customers": [
@@ -48,7 +158,19 @@
       "email": "fdsa",
       "cel": "fdsa",
       "cpf": "fdsa",
-      "id": 5
+      "id": 5,
+      "sales": [
+        {
+          "type": "Auto",
+          "insurer": "Liberty",
+          "value": "1230",
+          "confirmed_sale": true,
+          "date_payment": "12/02/2019",
+          "date_start": "13/02/2019",
+          "due": 90,
+          "share": 30
+        }
+      ]
     },
     {
       "name": "fdsjakljfalj",
@@ -56,7 +178,8 @@
       "email": "fdsakljfdskjalajçkl",
       "cel": "jksjkdfaskldjfakls",
       "cpf": "fdsjafdsafdsafa",
-      "id": 6
+      "id": 6,
+      "sales": []
     },
     {
       "name": "fdsa",
@@ -64,7 +187,8 @@
       "email": "fdsa",
       "cel": "fdsa",
       "cpf": "fdsa",
-      "id": 8
+      "id": 8,
+      "sales": []
     },
     {
       "name": "Matheus S Bernardo",
@@ -72,7 +196,29 @@
       "email": "matheussbernardo@gmail.com",
       "cel": "6196957171",
       "cpf": "1231231",
-      "id": 9
+      "id": 9,
+      "sales": []
+    },
+    {
+      "name": "Matheus S Bernardo",
+      "address": "Rua 4 Chácara 28 A",
+      "email": "matheussbernardo@gmail.com",
+      "cel": "6196957171",
+      "cpf": "12313",
+      "telegram": "",
+      "facebook": "",
+      "id": 10,
+      "sales": []
+    },
+    {
+      "name": "Matheus S Bernardo",
+      "address": "Rua 4 Chácara 28 A",
+      "email": "matheussbernardo@gmail.com",
+      "cel": "6196957171",
+      "cpf": "12321",
+      "telegram": "",
+      "facebook": "",
+      "id": 11
     }
   ],
   "comments": [

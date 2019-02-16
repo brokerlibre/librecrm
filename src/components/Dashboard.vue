@@ -1,18 +1,38 @@
 <template>
   <v-container grid-list-md text-xs-center>
     <v-layout row wrap>
-      <v-flex md-6 xs-12>
-        <insurances-container :sales="this.sales" v-if="this.loaded"/>
+      <v-flex md-6 xs6>
+          <v-card>
+            <v-card-title primary-title>
+                <h3 class="headline mb-0">Porcentagem por tipo de apólice</h3>
+                <insurances-container :sales="this.sales" v-if="this.loaded"/>
+            </v-card-title>
+          </v-card>
       </v-flex>
-      <v-flex md-6 xs-12>
-        <insurances-sell-container/>
+      <v-flex md-6 xs6>
+          <v-card>
+            <v-card-title primary-title>
+                <h3 class="headline mb-0">Valor arrecadado por bens</h3>
+                <insurances-sell-container/>
+            </v-card-title>
+          </v-card>
       </v-flex>
       <v-layout row wrap>
-        <v-flex md-6 xs-12>
-          <insurances-rentability-container/>
+        <v-flex md-6 xs6>
+          <v-card>
+            <v-card-title primary-title>
+                <h3 class="headline mb-0">Rentabilidade por tipo de seguro</h3>
+                <insurances-rentability-container/>
+            </v-card-title>
+          </v-card>
         </v-flex>
-        <v-flex md-6 xs-12>
-          <sell-insurance-month/>
+        <v-flex md-6 xs6>
+          <v-card>
+            <v-card-title primary-title>
+                <h3 class="headline mb-0">Número de apólices vendidas por mês</h3>
+                <sell-insurance-month/>
+            </v-card-title>
+          </v-card>
         </v-flex>
       </v-layout>
     </v-layout>

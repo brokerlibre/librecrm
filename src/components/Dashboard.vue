@@ -2,18 +2,18 @@
   <v-container fluid>
     <v-layout align-center justify-center row fill-height>
       <v-flex md-6 xs-12>
-        <insurances-container/>
+        <insurances-container :sales="this.sales"/>
       </v-flex>
       <v-flex md-6 xs-12>
-        <insurances-sell-container/>
+        <insurances-sell-container :sales="this.sales"/>
       </v-flex>
     </v-layout>
     <v-layout align-center justify-center row fill-height>
       <v-flex md-6 xs-12>
-        <insurances-rentability-container/>
+        <insurances-rentability-container :sales="this.sales"/>
       </v-flex>
       <v-flex md-6 xs-12>
-        <insurances-sell-container/>
+        <insurances-sell-container :sales="this.sales"/>
       </v-flex>
     </v-layout>
   </v-container>
@@ -29,7 +29,20 @@ export default {
     InsurancesSellContainer,
     InsurancesRentabilityContainer
   },
-  data: () => ({})
+  data: () => ({ sales: [] }),
+  mounted() {
+    this.loaded = false;
+    var self = this;
+    axios
+      .get("https://libreapi.temposerver.ml/api/sale/")
+      .then(function(response) {
+        self.sales = response.data;
+        this.loaded = true;
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
 };
 </script>
 

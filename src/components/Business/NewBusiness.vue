@@ -3,22 +3,21 @@
     <v-flex mb-5 xs12>
       <v-form ref="form">
         <h3>Nova Apólice</h3>
-        <v-radio-group v-model="business.type" row>
-          <v-radio value="auto" label="Automóvel"></v-radio>
-          <v-radio value="house" label="Habitação"></v-radio>
-          <v-radio value="life" label="Vida"></v-radio>
-          <v-radio value="gadgets" label="Gadgets"></v-radio>
-          <v-radio value="other" label="Outros"></v-radio>
+        <v-radio-group v-model="business.name" row>
+          <v-radio value="Automóvel" label="Automóvel"></v-radio>
+          <v-radio value="Habitação" label="Habitação"></v-radio>
+          <v-radio value="Vida" label="Vida"></v-radio>
+          <v-radio value="Celular" label="Celular"></v-radio>
+          <v-radio value="Outros" label="Outros"></v-radio>
         </v-radio-group>
         <v-text-field v-model="business.insurer" label="Seguradora"></v-text-field>
-        <v-text-field v-model="business.value" label="Valor"></v-text-field>
-        <v-checkbox v-model="business.confirmed_sale" label="Já fechou negócio?"></v-checkbox>
-        <div v-if="business.confirmed_sale">
-          <v-text-field v-model="business.portions" label="Parcelas"></v-text-field>
-          <v-date-picker v-model="business.date_payment" color="green lighten-1"></v-date-picker>
-          <v-date-picker v-model="business.date_start" color="green lighten-1"></v-date-picker>
-          <v-text-field v-model="business.due" label="Vencimento" type="number"></v-text-field>
-          <v-text-field v-model="business.percentage" label="% de ganho" type="number"></v-text-field>
+        <v-text-field v-model="business.totalvalue" label="Valor"></v-text-field>
+        <v-checkbox v-model="confirmed_sale" label="Já fechou negócio?"></v-checkbox>
+        <div v-if="confirmed_sale">
+          <v-date-picker v-model="business.paymentdate" color="green lighten-1"></v-date-picker>
+          <v-date-picker v-model="business.startdate" color="green lighten-1"></v-date-picker>
+          <v-text-field v-model="business.enddate" label="Vencimento" type="number"></v-text-field>
+          <v-text-field v-model="business.share" label="% de ganho" type="number"></v-text-field>
         </div>
         <v-btn @click="submit">Adicionar Business</v-btn>
       </v-form>
@@ -36,15 +35,17 @@ export default {
   data: function() {
     return {
       business: {
-        type: "",
+        name: "",
         insurer: "",
-        value: "",
-        confirmed_sale: false,
-        date_payment: null,
-        date_start: null,
-        due: 0,
-        percentage: 0
-      }
+        totalvalue: "",
+        paymentdate: "",
+        startdate: "",
+        enddate: "",
+        share: 0,
+        broker: 1,
+        customer: 1
+      },
+      confirmed_sale: false
     };
   },
   components: {
@@ -54,18 +55,16 @@ export default {
     submit() {
       var self = this;
       axios
-        .post("http://localhost:3000/business", self.business)
+        .post("https://libreapi.temposerver.ml/api/sale/", self.business)
         .then(function(response) {
-          console.log(response);
+          self.$router.push({
+            name: "ShowBusiness",
+            params: { business: self.business }
+          });
         })
         .catch(function(error) {
           console.log(error);
         });
-      var self = this;
-      this.$router.push({
-        name: "ShowBusiness",
-        params: { business: self.business }
-      });
     }
   }
 };

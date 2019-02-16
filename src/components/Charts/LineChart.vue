@@ -1,9 +1,7 @@
 <script>
-import { HorizontalBar } from "vue-chartjs";
+import { Line } from "vue-chartjs";
 
 export default {
-  extends: HorizontalBar,
-
   data: function() {
     return {
       options: {
@@ -18,6 +16,7 @@ export default {
       }
     };
   },
+  extends: Line,
   props: {
     chartdata: {
       type: Object,

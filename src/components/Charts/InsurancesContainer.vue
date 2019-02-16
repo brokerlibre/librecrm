@@ -1,6 +1,5 @@
 <template>
-  <div class="container" fluid>
-    <h5>Carteira de Apólices</h5>
+  <div class="container">
     <pie-chart :chartdata="chartdata" :options="options"/>
   </div>
 </template>
@@ -12,28 +11,41 @@ export default {
   name: "InsurancesContainer",
   components: { PieChart },
   props: {
-    sales: Array
+    sales: Object,
+    loaded: Boolean
   },
-  data: () => ({
-    chartdata: {
-      datasets: [
-        {
-          data: [10, 20, 30, 40],
-          backgroundColor: ["#ff6384", "#36a2eb", "#ffce56", "#23ce56"]
-        }
-      ],
-      labels: ["Automovel", "Habitação", "Vida", "Outros"]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false
-    }
-  }),
-  mounted() {
-    var counts = {};
-    for (var i = 0; i < this.sale.length; i++) {
-      counts[this.sales[i]] = 1 + (counts[this.sales[i]] || 0);
-    }
+  data: function() {
+    return {
+      chartdata: {
+        datasets: [
+          {
+            data: this.sales.data,
+            backgroundColor: [
+              "#f9e140",
+              "#ffdf60",
+              "#eae9e5",
+              "#ffce56",
+              "#777671"
+            ]
+          }
+        ],
+        labels: this.sales.labels
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            // This more specific font property overrides the global property
+            fontColor: "white"
+          }
+        },
+        maintainAspectRatio: false
+      }
+    };
+  },
+  mounted: function() {
+    console.log("MOUNTED INSURANCE CONATINER");
+    console.log(this.sales.data);
   }
 };
 </script>

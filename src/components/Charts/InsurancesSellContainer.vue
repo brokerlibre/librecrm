@@ -1,5 +1,5 @@
 <template>
-  <div class="container" fluid>
+  <div class="container">
     <bar-chart :chartdata="chartdata"/>
   </div>
 </template>
@@ -17,28 +17,18 @@ export default {
       datasets: [
         {
           type: "bar",
-          label: "Bar Component",
-          data: [20, 20, 30, 40, 50, 60]
-        },
-        {
-          type: "line",
-          label: "Line Component",
-          fill: false,
-          data: [30, 30, 32],
-          backgroundColor: ["#123"]
+          label: "Valor Arrecadado",
+          data: [8065, 5048],
+          backgroundColor: [
+            "#f9e140",
+            "#ffdf60",
+            "#eae9e5",
+            "#ffce56",
+            "#777671"
+          ]
         }
       ]
     }
-  }),
-  async mounted() {
-    this.loaded = false;
-    try {
-      //   const { userlist } = await fetch("/api/userlist");
-      // this.
-      this.loaded = true;
-    } catch (e) {
-      console.error(e);
-    }
-  }
+  })
 };
 </script>

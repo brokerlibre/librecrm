@@ -13,11 +13,18 @@ export default {
   data: () => ({
     loaded: false,
     chartdata: {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      labels: ["Vida", "Habitação", "Automóvel", "Saúde"],
       datasets: [
         {
-          label: "Bar Component",
-          data: [20, 20, 30, 40, 50, 60]
+          label: "Rentabilidade por tipo de Apólice",
+          data: [850, 600, 400, 350],
+          backgroundColor: [
+            "#f9e140",
+            "#ffdf60",
+            "#eae9e5",
+            "#ffce56",
+            "#777671"
+          ]
         }
       ]
     }

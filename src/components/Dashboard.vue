@@ -1,21 +1,22 @@
 <template>
-  <v-container fluid>
-    <v-layout align-center justify-center row fill-height>
+  <v-container grid-list-md text-xs-center>
+    <v-layout row wrap>
       <v-flex md-6 xs-12>
-        <insurances-container :sales="this.sales"/>
+        <insurances-container :sales="this.sales" v-if="this.loaded"/>
       </v-flex>
       <v-flex md-6 xs-12>
-        <insurances-sell-container :sales="this.sales"/>
+        <insurances-sell-container/>
       </v-flex>
+      <v-layout row wrap>
+        <v-flex md-6 xs-12>
+          <insurances-rentability-container/>
+        </v-flex>
+        <v-flex md-6 xs-12>
+          <sell-insurance-month/>
+        </v-flex>
+      </v-layout>
     </v-layout>
-    <v-layout align-center justify-center row fill-height>
-      <v-flex md-6 xs-12>
-        <insurances-rentability-container :sales="this.sales"/>
-      </v-flex>
-      <v-flex md-6 xs-12>
-        <insurances-sell-container :sales="this.sales"/>
-      </v-flex>
-    </v-layout>
+    <v-layout align-center justify-center row fill-height></v-layout>
   </v-container>
 </template>
 
@@ -23,21 +24,34 @@
 import InsurancesContainer from "./Charts/InsurancesContainer";
 import InsurancesSellContainer from "./Charts/InsurancesSellContainer";
 import InsurancesRentabilityContainer from "./Charts/InsurancesRentabilityContainer";
+import SellInsuranceMonth from "./Charts/SellInsuranceMonth";
+const axios = require("axios");
 export default {
   components: {
     InsurancesContainer,
     InsurancesSellContainer,
-    InsurancesRentabilityContainer
+    InsurancesRentabilityContainer,
+    SellInsuranceMonth
   },
-  data: () => ({ sales: [] }),
+  data: () => ({ sales: {}, loaded: false }),
   mounted() {
     this.loaded = false;
     var self = this;
     axios
       .get("https://libreapi.temposerver.ml/api/sale/")
       .then(function(response) {
-        self.sales = response.data;
-        this.loaded = true;
+        var arr = response.data.map(o => o.name);
+        var counts = {};
+        for (var i = 0; i < arr.length; i++) {
+          counts[arr[i]] = 1 + (counts[arr[i]] || 0);
+        }
+        console.log(Object.keys(counts), Object.values(counts));
+        self.sales = {
+          labels: Object.keys(counts),
+          data: Object.values(counts)
+        };
+        console.log(self.sales);
+        self.loaded = true;
       })
       .catch(function(error) {
         console.log(error);
